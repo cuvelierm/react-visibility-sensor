@@ -147,7 +147,7 @@ export default class VisibilitySensor extends React.Component {
       }
     };
 
-    target.addEventListener(event, info.fn);
+    target.addEventListener(event, info.fn, { passive: false, capture: bubble });
     this.debounceCheck[event] = info;
   };
 
